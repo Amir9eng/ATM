@@ -1,0 +1,310 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(./images/UBN-Skyline.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 20vh auto;
+    width: 30rem;
+    height: 18rem;
+    perspective: 1000px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: .7rem;
+}
+
+.front {
+    background-color: #00AEEF;
+    /* padding: .8rem; */
+}
+
+.back {
+    background-color: #00AEEF;
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover .container {
+    transform: rotateY(180deg);
+    transition: 2s;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem;
+}
+
+.head img {
+    width: 6rem;
+    height: 5rem;
+}
+
+.head span {
+    color: whitesmoke;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle img {
+    width: 5.5rem;
+    height: 4rem;
+    z-index: 2;
+}
+
+.middle span {
+    color: whitesmoke;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+.divider {
+    background-color: whitesmoke;
+    height: .3rem;
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    z-index: 1;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem;
+    margin-top: -2rem;
+    z-index: 3;
+    position: relative;
+    font-family: 'Noto Serif', serif;
+}
+
+.numbers img {
+    width: 5.5rem;
+    height: 4rem;
+}
+
+.numbers span {
+    color: whitesmoke;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5rem;
+}
+
+.bottom span {
+    color: whitesmoke;
+}
+
+.valid {
+    font-size: .7rem;
+}
+
+.bottomful {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Noto Serif', serif;
+    padding: 0 .5rem;
+}
+
+.bottomful img {
+    width: 4rem;
+    height: 3rem;
+    padding-bottom: .6rem;
+    margin-right: .6rem;
+}
+
+.bottomful p {
+    color: whitesmoke;
+    font-weight: lighter;
+    margin-left: 1rem;
+}
+
+.back span {
+    font-size: .8rem;
+    margin-left: .7rem;
+    color: whitesmoke;
+}
+
+.add {
+    font-size: .8rem;
+    margin-left: .7rem;
+    color: whitesmoke;
+}
+
+.stripe {
+    background-color: silver;
+    height: 4rem;
+    width: 100%;
+}
+
+.back p {
+    color: whitesmoke;
+    font-size: .8rem;
+}
+
+.gradient {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: .5rem;
+    width: 60%;
+    height: 2rem;
+    background: repeating-linear-gradient( 45deg, white 20px, white 10px, gray 10px, gray 30px)
+}
+
+.gradient span {
+    padding-right: 1rem;
+    color: black;
+}
+
+.wordings p {
+    margin-left: .5rem;
+}
+
+.interswitch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interswitch img {
+    width: 6rem;
+    height: 3rem;
+}
+
+.union {
+    width: 7rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+
+/* 
+.front-card,
+.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: .5rem .5rem 0;
+    background-color: #00AEEF;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.top {
+    position: relative;
+}
+
+.top-logo {
+    position: absolute;
+    left: 1rem;
+    top: 4.7rem;
+}
+
+.name {
+    width: 7rem;
+    height: 7rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo span {
+    letter-spacing: 4px;
+    font-size: 1rem;
+}
+
+.logo p {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.emv {
+    display: block;
+    width: 4rem;
+    height: 3rem;
+    background-color: #00AEEF;
+    margin-bottom: 1rem;
+}
+
+.hologram {
+    width: 6.0rem;
+    height: 5rem;
+    margin-left: 7.3rem;
+}
+
+.verve-logo {
+    margin-top: 1rem;
+    width: 6rem;
+    height: 2rem;
+    margin-left: 7.3rem;
+}
+
+.valid {
+    position: absolute;
+    top: 7.5rem;
+}
+
+.card-no {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 8px;
+}
+
+.vv {
+    font-size: .5rem;
+}  */
